@@ -4,30 +4,29 @@
       class="section"
       style="background-color: #f2f2f2; padding-bottom: 160px"
     >
+      <div style="position: sticky">
+        <div class="right-circle">
+          <img
+            class="overlay-circle"
+            src="~/assets/ic_circle.png"
+            alt=""
+            width="200"
+          />
+        </div>
+      </div>
+
+      <div style="position: sticky">
+        <div class="left-circle">
+          <img
+            class="overlay-circle"
+            src="~/assets/ic_circle.png"
+            alt=""
+            width="200"
+          />
+        </div>
+      </div>
       <div class="container">
         <img class="header-img" src="~/assets/90_day_supplyx.png" alt="" />
-
-        <div style="position: sticky">
-          <div class="right-circle">
-            <img
-              class="overlay-circle"
-              src="~/assets/ic_circle.png"
-              alt=""
-              width="200"
-            />
-          </div>
-        </div>
-
-        <div style="position: sticky">
-          <div class="left-circle">
-            <img
-              class="overlay-circle"
-              src="~/assets/ic_circle.png"
-              alt=""
-              width="200"
-            />
-          </div>
-        </div>
 
         <div
           class="columns is-centered has-text-centered"
@@ -447,17 +446,42 @@ hr {
 
 .right-circle {
   position: absolute;
-  right: -220px;
-  top: -260px;
+  right: -120px;
+  top: -20px;
 }
 
 .left-circle {
   position: absolute;
-  left: -250px;
-  top: -60px;
+  left: -150px;
+  top: 180px;
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .right-circle {
+    position: absolute;
+    right: -140px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -170px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+  .right-circle {
+    position: absolute;
+    right: -140px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -170px;
+    top: 220px;
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
   .right-circle {
     position: absolute;
     right: -150px;
@@ -466,35 +490,34 @@ hr {
   .left-circle {
     position: absolute;
     left: -170px;
-    top: -30px;
+    top: 230px;
   }
 }
 
-@media only screen and (min-width: 1216px) and (max-width: 1407px) {
-  .right-circle {
-    position: absolute;
-    right: -225px;
-    top: -290px;
-  }
-
-  .left-circle {
-    position: absolute;
-    left: -210px;
-    top: -30px;
-  }
-}
-
-@media only screen and (min-width: 1408px) {
+@media screen and (min-width: 1408px) {
   .right-circle {
     position: absolute;
     right: -140px;
-    top: -290px;
   }
 
   .left-circle {
     position: absolute;
     left: -150px;
-    top: 0px;
+    top: 240px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .right-circle {
+    position: absolute;
+    right: -130px;
+    top: -20px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -150px;
+    top: 220px;
   }
 }
 </style>
