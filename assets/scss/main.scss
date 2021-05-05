@@ -1,0 +1,20 @@
+@import "~bulma/sass/utilities/_all";
+
+.icon{
+    background-color: #3b1a45;
+}
+
+.label{
+    color: #606060;
+    font-size: 16px;
+}
+
+::placeholder{
+    color: #838383;
+}
+
+.button.is-primary{
+    background-color: transparent;
+    font-size: 2px;
+    margin-top: 16px;
+}

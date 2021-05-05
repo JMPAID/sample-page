@@ -74,4 +74,12 @@ export default {
   color: white;
   margin-left: 10px;
 }
+
+.navbar-burger {
+  color: #dd9933;
+}
+
+.navbar-menu.is-active {
+  background-color: #3b1a45;
+}
 </style>
