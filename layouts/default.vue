@@ -9,6 +9,6 @@
 
 <style>
 .main-content {
-  font-family: Montserrat-Medium;
+  font-family: "EB Garamond", serif;
 }
 </style>

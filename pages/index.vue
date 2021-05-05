@@ -236,23 +236,23 @@
           </div>
           <div class="column is-2">
             <h4>Usual Copay?</h4>
-            <b-field>
-              <b-input placeholder="$100"></b-input>
-            </b-field>
+            <div class="field">
+              <input class="input has-text-centered" v-model="usual_copy" />
+            </div>
           </div>
           <div class="column is-2">
             <h4>VeloxRxPrice</h4>
-            <b-field>
-              <b-input placeholder="$89.92"></b-input>
-            </b-field>
+            <div class="field">
+              <input class="input has-text-centered" v-model="veloxrx_price" />
+            </div>
           </div>
           <div class="column is-2">
             <h4>Savings</h4>
             <div class="field">
               <input
+                v-model="savings"
                 type="text"
-                class="input savings"
-                placeholder="$10.18"
+                class="input has-text-centered"
                 style="background-color: #ff5724; border: none; color: white"
               />
             </div>
@@ -319,9 +319,12 @@
             </p>
             <p style="font-size: 14px">Katy, TX, 77494</p>
           </div>
-          <div class="column is-3" style="margin-top: 50px">
+          <div
+            class="column is-3 is-flex-direction-column"
+            style="margin-top: 50px"
+          >
             <h1 class="title is-size-4">Contact Us</h1>
-            <div
+            <span
               class="is-inline-flex"
               style="font-size: 14px; margin-bottom: 14px"
             >
@@ -331,11 +334,11 @@
                 style="margin-right: 10px"
               />
               <p>pharmary@veloxrx.com</p>
-            </div>
+            </span>
 
-            <div
+            <span
               class="is-inline-flex"
-              style="font-size: 14px; margin-bottom: 14px"
+              style="font-size: 14px; margin-bottom: 14px; width: 350px"
             >
               <img
                 src="~/assets/ic_headset.png"
@@ -343,21 +346,19 @@
                 style="margin-right: 10px"
               />
               <p>(346) 387-7160</p>
-            </div>
+            </span>
 
-            <div>
-              <div
-                class="is-inline-flex"
-                style="font-size: 14px; margin-bottom: 14px"
-              >
-                <img
-                  src="~/assets/ic_pager.png"
-                  alt=""
-                  style="margin-right: 10px"
-                />
-                <p>(346) 707-3640</p>
-              </div>
-            </div>
+            <span
+              class="is-inline-flex"
+              style="font-size: 14px; margin-bottom: 14px"
+            >
+              <img
+                src="~/assets/ic_pager.png"
+                alt=""
+                style="margin-right: 10px"
+              />
+              <p>346) 707-3640</p>
+            </span>
           </div>
         </div>
       </div>
@@ -371,6 +372,9 @@ export default {
   data() {
     return {
       values: 1,
+      savings: "$10.18",
+      usual_copy: "$100",
+      veloxrx_price: "$89.92",
       items: [
         {
           name: "Lisonopril",
@@ -420,6 +424,9 @@ p.check-description {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
 
 h1 {
   color: #3b1a45;
@@ -433,10 +440,6 @@ h4 {
 .carousel-item {
   width: 60px !important;
   height: 40px !important;
-}
-
-input.savings::placeholder {
-  color: white;
 }
 
 hr {
