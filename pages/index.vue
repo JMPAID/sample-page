@@ -8,7 +8,7 @@
         <img class="header-img" src="~/assets/90_day_supplyx.png" alt="" />
 
         <div style="position: sticky">
-          <div style="position: absolute; right: -220px; top: -260px">
+          <div class="right-circle">
             <img
               class="overlay-circle"
               src="~/assets/ic_circle.png"
@@ -19,7 +19,7 @@
         </div>
 
         <div style="position: sticky">
-          <div style="position: absolute; left: -250px; top: -60px">
+          <div class="left-circle">
             <img
               class="overlay-circle"
               src="~/assets/ic_circle.png"
@@ -39,13 +39,13 @@
             <p class="check-description">meds online</p>
           </div>
 
-          <div class="divider"></div>
+          <div class="divider is-hidden-touch"></div>
           <div class="column is-4">
             <img class="img-check" src="~/assets/ic_check.png" alt="" />
             <p class="check-description">Save up</p>
             <p class="check-description">to 80%</p>
           </div>
-          <div class="divider"></div>
+          <div class="divider is-hidden-touch"></div>
           <div class="column is-4">
             <img class="img-check" src="~/assets/ic_check.png" alt="" />
             <p class="check-description">Fast & free delivery</p>
@@ -77,7 +77,11 @@
       </div>
     </div>
 
-    <div class="section" style="background-color: #ff5724; padding: 160px 40px">
+    <div
+      class="section"
+      style="background-color: #ff5724; padding: 160px 40px"
+      id="aboutUs"
+    >
       <div class="container">
         <div class="columns is-vcentered is-variable is-7">
           <div class="column is-6">
@@ -107,7 +111,7 @@
         :items-to-show="3"
         style="box-shadow: none; margin-top: 60px"
         icon-size="is-large"
-        repeat="true"
+        :repeat="true"
       >
         <template #item="list">
           <div class="">
@@ -182,8 +186,9 @@
               <div class="field">
                 <div class="select is-fullwidth">
                   <select style="border: 1px solid #ff5724">
-                    <option value="1">Viagra 25MG (Prescription)</option>
-                    <option value="2">Option 2</option>
+                    <option value="1" selected disabled>
+                      Viagra 25MG (Prescription)
+                    </option>
                   </select>
                 </div>
               </div>
@@ -341,13 +346,18 @@
               <p>(346) 387-7160</p>
             </div>
 
-            <div class="is-inline-flex" style="font-size: 14px">
-              <img
-                src="~/assets/ic_pager.png"
-                alt=""
-                style="margin-right: 10px"
-              />
-              <p>(346) 707-3640</p>
+            <div>
+              <div
+                class="is-inline-flex"
+                style="font-size: 14px; margin-bottom: 14px"
+              >
+                <img
+                  src="~/assets/ic_pager.png"
+                  alt=""
+                  style="margin-right: 10px"
+                />
+                <p>(346) 707-3640</p>
+              </div>
             </div>
           </div>
         </div>
@@ -433,5 +443,58 @@ input.savings::placeholder {
 hr {
   border-top: 1px solid #3b1a45;
   margin: 40px 80px;
+}
+
+.right-circle {
+  position: absolute;
+  right: -220px;
+  top: -260px;
+}
+
+.left-circle {
+  position: absolute;
+  left: -250px;
+  top: -60px;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .right-circle {
+    position: absolute;
+    right: -150px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -170px;
+    top: -30px;
+  }
+}
+
+@media only screen and (min-width: 1216px) and (max-width: 1407px) {
+  .right-circle {
+    position: absolute;
+    right: -225px;
+    top: -290px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -210px;
+    top: -30px;
+  }
+}
+
+@media only screen and (min-width: 1408px) {
+  .right-circle {
+    position: absolute;
+    right: -140px;
+    top: -290px;
+  }
+
+  .left-circle {
+    position: absolute;
+    left: -150px;
+    top: 0px;
+  }
 }
 </style>

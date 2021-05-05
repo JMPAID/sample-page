@@ -34,7 +34,7 @@
       >
         <div class="navbar-end">
           <div class="navbar-item">
-            <a class="navbar-item is-transparent" v-scroll-to="'#screenshots'">
+            <a class="navbar-item is-transparent" v-scroll-to="'#aboutUs'">
               About Us
             </a>
 
